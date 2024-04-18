@@ -1,0 +1,161 @@
+header{
+    padding-top: 1rem;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(logos_icones/icone_groupe.jpg);
+    height: 6rem;
+}
+.type_musique {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 12rem;
+}
+.type_musique img {
+    width: 12rem;
+    height: 12rem;
+}
+.background{
+    background-image: url(logos_icones/icone_groupe2.webp);
+    background-repeat: repeat;
+    height: 15rem;
+    width: 100%;
+    grid-column: 1/5;
+}
+section{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.cote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.cote img {
+    width: 10rem;
+    height: 10rem;
+}
+.artiste img{
+    width: 14rem;
+    height: 13rem;
+}
+.artiste{
+    justify-content: space-around;
+    background-color: #bc86bd;
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+}
+.imgL{
+    grid-column: 2/3;
+}
+h3{
+    background-color: #137867;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+p{
+    background-color: #367822;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.sous_menu{
+    display: none;
+}
+.menu_principal li:hover .sous_menu{
+    display: block;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    width: 8rem;
+}
+.sous_menu li{
+    margin-top: 1rem;
+    background: #d3edde;
+    width: 7rem;
+}
+.sous_menu li:hover{
+    background: #137867;
+    color: white;
+}
+li{
+    color: white;
+    background: #137867;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 8rem;
+}
+hr{
+    border: 0.2rem solid #137867;
+}
+input{
+    padding: 0.5rem;
+    background-color: #1d4d73;
+    border-radius: 20px;
+    width: 20rem;
+    height: 2rem;
+}
+button{
+    padding: 0.5rem;
+    background-color: #1abd9c;
+    border-radius: 20px;
+    width: 10rem;
+    height: 3.5rem;
+}
+
+/*je dois rendre ce site responsive de maniere a ce qu'il n'y ait que la barre de recherche qui apparaisse et que les images des artiste uniquement s'affiche sur une seule colonne
+*/
+/* Media queries for responsiveness on phones */
+@media screen and (max-width: 480px) {
+    input {
+        display: block;
+        margin: 1rem auto;
+        width: 80%;
+    }
+    .search{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .type_musique{
+        padding-right: 7rem;
+        padding-top: 2rem;
+    }
+    h3{
+        width: 100%;
+        margin-left: 7rem;
+        padding-left: 2rem;
+        padding-right: 2rem; 
+    }
+    .artiste {
+        display: flex;
+        flex-direction: column;
+    }
+    .artiste img {
+        height: 16rem;
+        margin-left: 3rem;
+    }
+    .cote, .type_musique ul, hr {
+        display: none;
+    }
+    main{
+        background-color: #bc86bd;
+        display: grid;
+    }
+    body{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
